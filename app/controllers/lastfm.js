@@ -5,12 +5,12 @@
  * @param  {object} helpers helpers object
  * @return {void}
  */
-module.exports = function(app){
+module.exports = function(){
   'use strict';
 
   var http = require('http');
 
-  app.get('/lastfm/:user/:method/:limit?', function(req, res){
+  this.get('/lastfm/:user/:method/:limit?', function(req, res){
     var limit = req.params.limit || 10,
         method = req.params.method,
         user = req.params.user,

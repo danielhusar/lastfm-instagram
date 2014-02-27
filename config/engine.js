@@ -1,30 +1,24 @@
 module.exports = function(app, express){
   'use strict';
 
-  var swig   = require('swig'),
-      path   = require('path');
+  var swig = require('swig'),
+      path = require('path');
 
   //development enviroment
   app.configure('development', function(){
-    //errors handling
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
     app.use(express.logger('dev'));
-
-    //swig settings
     swig.setDefaults({ cache: false });
     app.set('view cache', false);
   });
 
   //production enviroment
   app.configure('production', function(){
-    //errors handling
     app.use(express.errorHandler());
     app.use(express.logger());
-    //swig settings
     swig.setDefaults({ cache: true });
     app.set('view cache', true);
   });
-
 
   app.engine('html', swig.renderFile);
   app.set('view engine', 'html');

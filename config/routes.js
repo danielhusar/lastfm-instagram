@@ -2,10 +2,10 @@
 	*  ALL THE STATIC ROUTES
 	*  THIS ROUTES HERE OVERRIDES THE ROUTES DEFINED IN CONTROLLERS
 **/
-module.exports = function(app, helpers){
+module.exports = function(helpers){
   'use strict';
 
-	app.get('/test', function(req, res){
+	this.get('/test', function(req, res){
 		helpers.template(res, 'index.html', {});
 	});
 };

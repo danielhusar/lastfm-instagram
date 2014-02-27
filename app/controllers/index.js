@@ -5,10 +5,10 @@
  * @param  {object} helpers helpers object
  * @return {void}
  */
-module.exports = function(app, model, helpers){
+module.exports = function(model, helpers){
   'use strict';
 
-	app.get('/', function(req, res){
+	this.get('/', function(req, res){
 		helpers.template(res, 'index.html', {});
 	});
 

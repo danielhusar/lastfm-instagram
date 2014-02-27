@@ -1,6 +1,5 @@
 /**
  * Main controller for the lastfm api
- * @param  {object} app     app object
  * @param  {object} model   model object that belong to the current controller
  * @param  {object} helpers helpers object
  * @return {void}

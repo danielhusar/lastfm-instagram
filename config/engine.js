@@ -25,16 +25,16 @@ module.exports = function(app, express){
     app.set('view cache', true);
   });
 
-  //settings
 
   app.engine('html', swig.renderFile);
   app.set('view engine', 'html');
   app.set('views', process.cwd() + '/app/views');
 
   app.use(express.favicon(process.cwd() + '/public/img/icons/favicon.ico'));
-  app.use(express.bodyParser());
+  app.use(express.json());
+  app.use(express.urlencoded());
   app.use(express.methodOverride());
-  app.use(express.cookieParser('secreet key'));
+  app.use(express.cookieParser('35a4s65d4ad5a5456a4d6ad54a654da6s54d'));
   app.use(express.session());
   app.use(app.router);
   app.use(express.static(path.join(process.cwd(), 'public')));

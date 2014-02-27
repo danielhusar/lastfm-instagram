@@ -4,14 +4,15 @@
  * @param  {object} helpers helpers object
  * @return {void}
  */
-module.exports = function(app, helpers){
+module.exports = function(){
+  'use strict';
 
 	var model = {
 		data : ['first', 'second', 'third'],
-		edit : function(id, data){},
-		new  : function(data){},
-		delete : function(id){}
-	}
+		edit : function(){},
+		new  : function(){},
+		delete : function(){}
+	};
 
 	return model;
 };

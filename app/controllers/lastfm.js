@@ -11,8 +11,6 @@ module.exports = function(app){
   var http = require('http');
 
   app.get('/lastfm/:user/:method/:limit?', function(req, res){
-    //res.writeHead(200, { 'Content-Type': 'application/json' });
-    //
     var limit = req.params.limit || 10,
         method = req.params.method,
         user = req.params.user,

@@ -26,11 +26,11 @@ lib-cov
 *.pid
 *.gz
 
-*.packed.js
-
 pids
 logs
 results
+
+config/api.js
 
 npm-debug.log
 node_modules

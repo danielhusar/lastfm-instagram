@@ -5,7 +5,7 @@ var express  = require('express'),
     helpers  = require('./app/helpers/helpers'),
     app = express();
 
-require('./config/config')(app, express);
+require('./config/engine')(app, express);
 
 //require all controllers with the models
 require('fs').readdirSync('./app/controllers').forEach(function(file) {

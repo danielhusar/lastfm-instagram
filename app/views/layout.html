@@ -11,14 +11,8 @@
 	<meta name="viewport" content="width=device-width">
 	<title>{% block title %}My Site{% endblock %}</title>
 
-	<!--[if (gte IE 9)|!(IE)]><!-->
-		<link rel="stylesheet" href="/css/style.css">
-	<!--<![endif]-->
-	<!--[if (lt IE 9)]>
-		<link rel="stylesheet" href="/css/IE.css">
-	<![endif]-->
-
-	<script src="/js/libraries/modernizr-2.7.1.min.js"></script>
+	<link rel="stylesheet" href="css/style.{% if isProduction %}min.{% endif %}css">
+	<script src="js/libraries/modernizr-2.7.1.min.js"></script>
 </head>
 <body>
 	<!--[if lt IE 8]>
@@ -28,13 +22,13 @@
 		{% block content %}{% endblock %}
 	</div>
 
-  <script src="//code.jquery.com/jquery-1.11.0.js"></script>
-  <script>
-  if (!window.jQuery) {
-      document.write('<script src="js/libraries/jquery-1.11.0.min.js"><\/script>');
-  }
-  </script>
-	<script src="/js/app.min.js"></script>
+  {% if isProduction %}
+    <script src="components/angular/angular.min.js"></script>
+    <script src="js/app.min.js"></script>
+  {% else %}
+    <script src="components/angular/angular.js"></script>
+  {% endif %}
+
 
 </body>
 </html>

@@ -32,6 +32,9 @@ results
 
 config/api.js
 cache/*.json
+public/components
+public/css/*.css
+public/js/app.min.js
 
 npm-debug.log
 node_modules

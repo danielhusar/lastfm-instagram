@@ -1,0 +1,8 @@
+{
+  "name": "last-fm-instragram-stream",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "*",
+    "bootstrap": "*"
+  }
+}

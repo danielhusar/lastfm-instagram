@@ -1,9 +1,9 @@
 {
   "name": "last-fm-instragram-stream",
-	"description": "last fm instragram stream",
+  "description": "last fm instragram stream",
   "version": "0.1.0",
-	"author": "Daniel Husar <dano.husar@gmail.com>",
-	"repository": {
+  "author": "Daniel Husar <dano.husar@gmail.com>",
+  "repository": {
     "type": "git",
     "url": "https://github.com/danielhusar/lastfm-instagram"
   },
@@ -15,7 +15,20 @@
     "express": "*",
     "swig": "*"
   },
-	"engines": {
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-less": "*",
+    "gulp-concat": "*",
+    "gulp-rename": "*",
+    "gulp-jshint": "*",
+    "jshint-stylish": "*",
+    "gulp-uglify": "*",
+    "gulp-cssmin": "*",
+    "gulp-autoprefixer": "*",
+    "mocha": "*",
+    "gulp-ngmin": "~0.1.2"
+  },
+  "engines": {
     "node": ">= 0.8.0"
   }
 }

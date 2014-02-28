@@ -13,6 +13,8 @@ var cssmin = require('gulp-cssmin');
 var prefix = require('gulp-autoprefixer');
 var stylish = require('jshint-stylish');
 var rename = require('gulp-rename');
+var spawn = require('child_process').spawn;
+var node;
 
 //less
 gulp.task('less', function () {
@@ -51,10 +53,10 @@ gulp.task('scripts', function () {
 });
 
 //watch Files For Changes
-gulp.task('watch', function () {
+gulp.task('server', function () {
+  node = spawn('node', ['app.js'], {stdio: 'inherit'});
   gulp.watch(['less/*.less', 'less/**/*.less', 'less/**/**/*.less', 'less/**/**/**/*.less'], ['less']);
 });
 
 //tasks aliases
 gulp.task('default', ['scripts', 'less', 'cssmin']);
-gulp.task('server', ['watch']);

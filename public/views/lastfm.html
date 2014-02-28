@@ -1,0 +1,18 @@
+<div class="header" ng-controller="LastFmController">
+  <div class="row">
+    <form ng-submit="submit()">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon">Username: </span>
+        <input type="text" class="form-control" placeholder="Please enter your last fm username" ng-model="username">
+        <input type="submit" value="submit" class="hidden">
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="photos lastfm row">
+  <div class="col-md-3" ng-repeat="artist in artists" ng-click="instagram(artist.name)">
+    <img ng-src="{{artist.image[4]['#text']}}">
+    <h4>{{artist.name}}</h4>
+  </div>
+</div>

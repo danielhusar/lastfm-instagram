@@ -12,4 +12,12 @@ module.exports = function(model, helpers){
 		helpers.template(res, 'index.html', {});
 	});
 
+  this.get('/username/:username', function(req, res){
+    helpers.template(res, 'index.html', {});
+  });
+
+  this.get('/username/:username/band/:band', function(req, res){
+    helpers.template(res, 'index.html', {});
+  });
+
 };

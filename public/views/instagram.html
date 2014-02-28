@@ -1,0 +1,12 @@
+<div class="header" ng-controller="LastFmController">
+  <div class="row">
+    <button type="button" class="btn btn-primary" ng-click="back();">Back</button>
+  </button>
+  </div>
+</div>
+
+<div class="photos instagram row">
+  <div class="col-md-3" ng-repeat="band in photos">
+    <img ng-src="{{band.url}}">
+  </div>
+</div>

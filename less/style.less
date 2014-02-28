@@ -1,1 +1,35 @@
 @import "public/components/bootstrap/less/bootstrap";
+
+/* Space out content a bit */
+body {
+  padding: 20px;
+}
+
+.header{
+  margin-bottom: 30px;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+img{
+  max-width: 100%;
+}
+
+.photos{
+  text-align: center;
+  img{
+    width: 100%;
+
+  }
+  > div{
+    margin-bottom: 30px;
+  }
+  &.instagram img{
+    box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.30);
+  }
+}

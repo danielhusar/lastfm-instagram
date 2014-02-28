@@ -11,15 +11,15 @@ require('./config/engine')(app, express);
 require('fs').readdirSync('./app/controllers').forEach(function(file) {
   var model;
   try{
-    model = require('./app/models/' + file).call(app, [helpers]);
+    model = require('./app/models/' + file).apply(app, [helpers]);
   } catch(err) {
-    model = false;
+    model = {};
   }
-  require('./app/controllers/' + file).call(app, [model, helpers]);
+  require('./app/controllers/' + file).apply(app, [model, helpers]);
 });
 
 //require static routes
-require('./config/routes').call(app, [helpers]);
+require('./config/routes').apply(app, [helpers]);
 
 //start server
 var port = process.env.PORT || 3000;

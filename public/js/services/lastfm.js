@@ -4,7 +4,7 @@
   window.app.service('LastFmService', function ($http) {
     return {
       get: function(user, method, limit) {
-        return $http.get('/api/lastfm/'+ user +'/'+ method +'/' + limit);
+        return $http.get('/api/lastfm/'+ user +'/'+ method +'/' + limit, { cache: true});
       }
     };
   });

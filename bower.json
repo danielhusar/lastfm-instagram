@@ -5,6 +5,7 @@
     "angular": "*",
     "angular-route": "*",
     "angular-slugify": "*",
+    "angular-animate": "*",
     "bootstrap": "*"
   }
 }

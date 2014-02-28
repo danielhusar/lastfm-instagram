@@ -24,7 +24,7 @@ module.exports = function(app, express){
   app.set('view engine', 'html');
   app.set('views', process.cwd() + '/app/views');
 
-  app.use(express.favicon(process.cwd() + '/public/img/icons/favicon.ico'));
+  app.use(express.favicon(process.cwd() + '/public/img/favicons/favicon.ico'));
   app.use(express.json());
   app.use(express.urlencoded());
   app.use(express.methodOverride());

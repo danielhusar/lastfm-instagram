@@ -5,8 +5,16 @@
   </div>
 </div>
 
-<div class="photos instagram row">
+<span class="spinner" ng-show="loading"></span>
+
+<div class="photos instagram row" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
   <div class="col-md-3" ng-repeat="band in photos">
-    <img ng-src="{{band.url}}">
+    <a href="#" ng-click="lightbox();"><img ng-src="{{band.url}}"></a>
   </div>
 </div>
+
+<div class="lightbox" ng-show="image" ng-click="close();">
+  <img ng-src="{{image}}">
+</div>
+
+<div class="alert alert-danger" ng-show="!loading && !photos.length">Sorry, theres no photos for this artist.</div>

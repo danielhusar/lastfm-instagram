@@ -4,10 +4,16 @@
   window.app.controller('LastFmController', function ($scope, $routeParams, $location, LastFmService, Slug) {
     var username = $routeParams.username;
     $scope.username = username;
+    $scope.loading = true;
+    $scope.homepage = false;
     if(username){
-      LastFmService.get(username, 'user.gettopartists', 10).then(function(data){
-        $scope.artists = data.data.topartists.artist;
+      LastFmService.get(username, 'user.gettopartists', 12).then(function(data){
+        $scope.artists = data.data.topartists ? data.data.topartists.artist : [];
+        $scope.loading = false;
       });
+    }else{
+      $scope.loading = false;
+      $scope.homepage = true;
     }
 
     $scope.submit = function(){

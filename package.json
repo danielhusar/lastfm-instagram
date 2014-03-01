@@ -26,8 +26,10 @@
     "gulp-uglify": "*",
     "gulp-cssmin": "*",
     "gulp-autoprefixer": "*",
+    "gulp-wait": "*",
     "mocha": "*",
-    "gulp-ngmin": "~0.1.2"
+    "gulp-ngmin": "~0.1.2",
+    "gulp-angular-templatecache": "~1.1.0"
   },
   "engines": {
     "node": ">= 0.8.0"

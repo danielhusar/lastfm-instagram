@@ -10,7 +10,8 @@
    *
    */
   exports.template = function(res, template, variables){
-    variables.isProduction = process.env.NODE_ENV === 'production';
+    variables = variables || {};
+    variables.isProduction = true || process.env.NODE_ENV === 'production';
     res.render(template, variables);
   };
 

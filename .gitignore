@@ -35,6 +35,7 @@ cache/*.json
 public/components
 public/css/*.css
 public/js/app.min.js
+public/views/templates.js
 
 npm-debug.log
 node_modules

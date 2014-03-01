@@ -1,7 +1,7 @@
 (function(window, document, angular){
   'use strict';
 
-  window.app = angular.module('app', ['ngRoute', 'ngAnimate', 'slugifier'])
+  angular.module('app', ['ngRoute', 'ngAnimate', 'slugifier'])
     .config(function ($routeProvider) {
       $routeProvider
         .when('/', {
@@ -23,18 +23,12 @@
           redirectTo: '/',
         });
     })
-    .config( ['$anchorScrollProvider',
-      function($anchorScrollProvider) {
+    .config(function ($anchorScrollProvider) {
         $anchorScrollProvider.disableAutoScrolling();
       }
-    ])
-    .config(['$locationProvider', function($locationProvider) {
+    )
+    .config(function ($locationProvider) {
       $locationProvider.html5Mode(true);
-    }])
-    .run(['$location', '$rootScope', function($location, $rootScope) {
-      $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-        $rootScope.title = current.$$route.title;
-      });
-    }]);
+    });
 
 })(this, this.document, this.angular);

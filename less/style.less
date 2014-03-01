@@ -38,30 +38,10 @@ img{
   }
 }
 
-/* Customize container */
-@media (min-width: 990px) {
-  .container {
-    max-width: 730px;
-  }
-  .photos > div{
-    position: relative;
-  }
-  .photos > div > div{
-    height: 150px;
-    overflow: hidden;
-  }
-  h4{
-    height: 40px;
-    overflow: hidden;
-  }
-}
-
-
 @keyframes spinner1 {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
@@ -71,7 +51,6 @@ img{
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(-360deg);
   }
@@ -126,5 +105,29 @@ img{
     margin-left: -320px;
     width: 640px;
     height: 640px;
+  }
+}
+
+/* Customize container */
+@media (min-width: 990px) {
+  .container {
+    max-width: 730px;
+  }
+  .photos > div{
+    position: relative;
+  }
+  .photos > div > div{
+    height: 150px;
+    overflow: hidden;
+  }
+  h4{
+    height: 40px;
+    overflow: hidden;
+  }
+
+}
+@media (max-width: 989px) {
+  .lightbox{
+    display: none !important;
   }
 }

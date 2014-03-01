@@ -1,7 +1,7 @@
 (function(window, document, angular){
   'use strict';
 
-  window.app.controller('InstagramController', function ($scope, $routeParams, $location, InstagramService) {
+  angular.module('app').controller('InstagramController', function ($scope, $routeParams, $location, InstagramService, $rootScope) {
     var username = $routeParams.username;
     var band = $routeParams.band;
     $scope.username = username;
@@ -9,9 +9,12 @@
     $scope.loading = true;
     if(band){
       InstagramService.get(band).then(function(data){
-         $scope.photos = data.data;
-         $scope.loading = false;
+        $scope.photos = data.data;
+        $scope.loading = false;
+        $rootScope.title = 'Instagram feed for tag: ' + band;
       });
+    }else{
+      $rootScope.title = 'Error';
     }
 
     $scope.back = function(){

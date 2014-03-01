@@ -16,7 +16,7 @@ module.exports = function(model, helpers){
    * @param  {object} res response
    * @return {void}
    */
-  this.get('/api/instragram/:tag', function(req, res){
+  this.get('/api/instragram/:tag/:min?/:max?', function(req, res){
     var instragram = require('instagram-node-lib'),
       cacheName = 'instagram-tags-' + req.params.tag,
       cache = helpers.cache.returnCache(cacheName, 600),
@@ -30,7 +30,7 @@ module.exports = function(model, helpers){
 
       instragram.tags.recent({
         'name': req.params.tag,
-        complete: function(data){
+        complete: function(data, pagination){
           var results = data.map(function(val){
             return val.images.standard_resolution;
           });

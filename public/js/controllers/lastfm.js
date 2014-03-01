@@ -19,11 +19,11 @@
       $scope.homepage = true;
     }
 
-    $scope.submit = function(){
+    $scope.submit = function() {
       $location.path( '/username/' + Slug.slugify(this.username) );
     };
 
-    $scope.instagram = function(artist){
+    $scope.instagram = function(artist) {
       $location.path( '/username/'+ $scope.username +'/band/' +  Slug.slugify(artist).replace(/\-/g, ''));
     };
   });

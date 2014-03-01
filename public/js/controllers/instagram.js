@@ -17,7 +17,7 @@
       $rootScope.title = 'Error';
     }
 
-    $scope.back = function(){
+    $scope.back = function() {
       $location.path( '/username/' + $scope.username );
     };
 
@@ -25,7 +25,7 @@
       $scope.image = window.outerWidth > 990 ? this.band.url : false;
     };
 
-    $scope.close = function(e){
+    $scope.close = function(e) {
       $scope.image = '';
     };
   });

@@ -1,4 +1,4 @@
-<div class="header" ng-controller="LastFmController">
+<div class="header">
   <div class="row">
      <div class="col-md-12">
       <button type="button" class="btn btn-primary" ng-click="back();">Back</button>
@@ -11,7 +11,7 @@
 
 <div class="photos instagram row" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
   <div class="col-md-3" ng-repeat="band in photos">
-    <a href="#" ng-click="lightbox();"><img ng-src="{{band.url}}"></a>
+    <img ng-src="{{band.url}}" ng-click="lightbox();">
   </div>
 </div>
 

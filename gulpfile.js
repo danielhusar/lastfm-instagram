@@ -56,16 +56,20 @@ gulp.task('scripts', function () {
   //wait for templates files
   setTimeout(function(){
     gulp.src([
+      'public/components/angular/angular.js',
+      'public/components/angular-route/angular-route.js',
+      'public/components/angular-animate/angular-animate.js',
+      'public/components/angular-slugify/angular-slugify.js',
       'public/js/app.js',
       'public/js/controllers/*.js',
       'public/js/services/*.js',
       'public/views/templates.js'
-      ])
+    ])
       .pipe(concat('app.min.js'))
       .pipe(ngmin())
       .pipe(uglify())
       .pipe(gulp.dest('public/js'));
-    }, 500);
+  }, 500);
 
 });
 

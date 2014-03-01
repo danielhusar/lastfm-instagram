@@ -25,8 +25,8 @@
       $scope.image = window.outerWidth > 990 ? this.band.url : false;
     };
 
-    $scope.close = function(){
-      $scope.image = false;
+    $scope.close = function(e){
+      $scope.image = '';
     };
   });
 

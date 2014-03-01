@@ -22,6 +22,5 @@ require('fs').readdirSync('./app/controllers').forEach(function(file) {
 require('./config/routes').apply(app, [helpers]);
 
 //start server
-var port = process.env.PORT || 3000;
-app.listen(port);
-console.log('Listening on port: ' + port);
+app.listen(3000);
+console.log('Listening on port: 3000');

@@ -35,7 +35,10 @@ module.exports = function(model, helpers){
             return val.images.standard_resolution;
           });
           helpers.cache.storeCache(cacheName, results);
-          res.json(results);
+          res.json(results || []);
+        },
+        error: function(){
+          res.json([]);
         }
       });
     }
@@ -68,10 +71,10 @@ module.exports = function(model, helpers){
 
         response.on('end', function() {
           helpers.cache.storeCache(cacheName, JSON.parse(body));
-          res.json(JSON.parse(body));
+          res.json(JSON.parse(body) || []);
         });
       }).on('error', function() {
-        res.json({error: 'error occured'});
+        res.json([]);
       });
     }
   });

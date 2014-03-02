@@ -14,7 +14,7 @@
         $scope.loading = false;
       });
     }else{
-      $rootScope.title = 'Please selet username';
+      $rootScope.title = 'Please select username';
       $scope.loading = false;
       $scope.homepage = true;
     }

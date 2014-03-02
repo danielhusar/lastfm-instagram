@@ -1,7 +1,7 @@
 (function(window, document, angular){
   'use strict';
 
-  angular.module('app').controller('LastFmController', function ($scope, $routeParams, $location, LastFmService, Slug, $rootScope, socket) {
+  angular.module('app').controller('LastFmController', function ($scope, $routeParams, $location, LastFmService, Slug, $rootScope) {
     var username = $routeParams.username;
     $scope.username = username;
     $scope.loading = true;

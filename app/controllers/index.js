@@ -8,16 +8,12 @@
 module.exports = function(model, helpers){
   'use strict';
 
-	this.get('/', function(req, res){
-		helpers.template(res, 'index.html');
-	});
-
-  this.get('/username/:username', function(req, res){
+  var index = function(req, res){
     helpers.template(res, 'index.html');
-  });
+  };
 
-  this.get('/username/:username/band/:band', function(req, res){
-    helpers.template(res, 'index.html');
-  });
+  this.get('/', index);
+  this.get('/username/:username', index);
+  this.get('/username/:username/band/:band', index);
 
 };

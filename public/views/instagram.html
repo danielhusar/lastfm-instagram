@@ -9,7 +9,7 @@
 
 <span class="spinner" ng-show="loading"></span>
 
-<div class="photos instagram row" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
+<div class="photos instagram row">
   <div class="col-md-3" ng-repeat="band in photos">
     <img ng-src="{{band.url}}" ng-click="lightbox();">
   </div>

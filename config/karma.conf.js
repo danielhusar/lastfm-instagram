@@ -15,8 +15,8 @@ module.exports = function (config) {
       'public/js/services/*.js',
 			'test/unit/*.js'
 		],
-		autoWatch: true,
-		singleRun: false,
+		autoWatch: false,
+		singleRun: true,
 		browsers: ['PhantomJS']
 	});
 };

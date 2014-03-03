@@ -10,10 +10,11 @@
     if(username){
       $rootScope.title = 'Top 12 artist for: ' + username;
       LastFmService.get(username, 'user.gettopartists', 12).success(function(data){
-        console.log(data);
         $scope.artists = data.topartists ? data.topartists.artist : [];
         $scope.loading = false;
-      });
+      }).error(function(){
+        $scope.loading = false;
+      });;
     }else{
       $rootScope.title = 'Please select username';
       $scope.loading = false;

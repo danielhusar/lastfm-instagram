@@ -7,11 +7,14 @@
     $scope.username = username;
     $scope.band = band;
     $scope.loading = true;
+    $scope.error = false;
     if(band){
-      InstagramService.get(band).then(function(data){
-        $scope.photos = data.data;
+      InstagramService.get(band).success(function(data){
+        $scope.photos = data;
         $scope.loading = false;
         $rootScope.title = 'Instagram feed for tag: ' + band;
+      }).error(function(){
+        $scope.loading = false;
       });
     }else{
       $rootScope.title = 'Error';

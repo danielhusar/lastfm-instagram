@@ -54,5 +54,35 @@
     });
   });
 
+  /**
+   * Instagram tests
+   */
+  describe('Instagram controller', function () {
+    var ctrl, scope, http;
+
+    beforeEach(module('app'));
+    beforeEach(inject(function ($controller, $rootScope, $location, $routeParams, $httpBackend) {
+      http = $httpBackend;
+      scope = $rootScope.$new();
+      ctrl = $controller('InstagramController', { $scope: scope, $routeParams: {username: 'awtt', band: 'ekkaia'} });
+    }));
+
+    it('Page should finish loading', function () {
+      http.when('GET','/api/instragram/ekkaia').respond([{}, {}]);
+      http.flush();
+      expect(scope.loading).toBe(false);
+    });
+
+    it('User should be awtt', function () {
+      expect(scope.username).toBe('awtt');
+    });
+
+    it('There should be 2 photos', function () {
+      http.when('GET','/api/instragram/ekkaia').respond([{}, {}]);
+      http.flush();
+      expect(scope.photos.length).toBe(2);
+    });
+  });
+
 
 }());

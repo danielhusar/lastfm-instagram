@@ -4,7 +4,7 @@
   angular.module('app').service('InstagramService', function ($http) {
     return {
       get: function(band) {
-        return $http.get('/api/instragram/' + band, { cache: true});
+        return $http({method: 'GET', url: '/api/instragram/' + band, cache: true});
       }
     };
   });

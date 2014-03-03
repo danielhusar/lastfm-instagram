@@ -1,8 +1,6 @@
 last fm instragram stream [![Build Status](https://travis-ci.org/danielhusar/lastfm-instagram.png)](https://travis-ci.org/danielhusar/lastfm-instagram)
 =========================
 
-![Screenshots](public/img/screenshot.png)
-
 Install dependencies:
 	
 	npm install
@@ -23,3 +21,7 @@ Run app with watch task to less files:
 Run karma test:
 
 	npm test
+
+[Demo](http://54.201.21.193:3000/)
+
+![Screenshots](public/img/screenshot.png)

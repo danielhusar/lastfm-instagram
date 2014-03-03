@@ -18,7 +18,7 @@ Run app with watch task to less files:
 
 	gulp server
 
-Run karma test:
+Run karma tests:
 
 	npm test
 

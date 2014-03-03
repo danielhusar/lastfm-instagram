@@ -4,5 +4,5 @@ node_js:
 notifications:
   email: false
 before_script:
-  npm install -g bower
-  bower install
+  - npm install -g bower
+  - bower install

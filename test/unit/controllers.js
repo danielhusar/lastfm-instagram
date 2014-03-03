@@ -1,22 +1,22 @@
 /*global describe, it, beforeEach, inject, expect*/
 (function () {
-	'use strict';
+  'use strict';
 
   /**
    * Index page tests
    */
-	describe('LastFM Controller for the index page', function () {
-		var ctrl, scope;
+  describe('LastFM Controller for the index page', function () {
+    var ctrl, scope;
 
-		beforeEach(module('app'));
-		beforeEach(inject(function ($controller, $rootScope, $location, $routeParams) {
-			scope = $rootScope.$new();
+    beforeEach(module('app'));
+    beforeEach(inject(function ($controller, $rootScope, $location, $routeParams) {
+      scope = $rootScope.$new();
       ctrl = $controller('LastFmController', { $scope: scope });
-		}));
+    }));
 
-		it('Theres should not be any artists on start', function () {
-			expect(scope.artists.length).toBe(0);
-		});
+    it('Theres should not be any artists on start', function () {
+      expect(scope.artists.length).toBe(0);
+    });
 
     it('Page should finish loading', function () {
       expect(scope.loading).toBe(false);
@@ -71,10 +71,6 @@
       http.when('GET','/api/instragram/ekkaia').respond([{}, {}]);
       http.flush();
       expect(scope.loading).toBe(false);
-    });
-
-    it('User should be awtt', function () {
-      expect(scope.username).toBe('awtt');
     });
 
     it('There should be 2 photos', function () {

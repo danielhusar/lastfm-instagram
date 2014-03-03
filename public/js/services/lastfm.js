@@ -4,7 +4,7 @@
   angular.module('app').service('LastFmService', function ($http) {
     return {
       get: function(user, method, limit) {
-        return $http.get('/api/lastfm/'+ user +'/'+ method +'/' + limit, { cache: true});
+        return $http({method: 'GET', url: '/api/lastfm/'+ user +'/'+ method +'/' + limit, cache: true});
       }
     };
   });

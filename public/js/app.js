@@ -5,7 +5,7 @@
     .config(function ($routeProvider) {
       $routeProvider
         .when('/', {
-          templateUrl: '/views/lastfm.html',
+          templateUrl: '/views/index.html',
           controller: 'LastFmController'
         })
         .when('/username/:username', {

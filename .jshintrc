@@ -22,6 +22,10 @@
     "before"     : false,
     "beforeEach" : false,
     "after"      : false,
-    "afterEach"  : false
+    "afterEach"  : false,
+    "chai"       : false,
+    "expect"     : false,
+    "should"     : false,
+    "angular"    : false
   }
 }

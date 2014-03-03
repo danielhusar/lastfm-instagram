@@ -8,7 +8,7 @@
     "url": "https://github.com/danielhusar/lastfm-instagram"
   },
   "scripts": {
-    "test": "mocha-phantomjs test/index.html 2>/dev/null",
+    "test": "karma start config/karma.conf.js",
     "start": "app.js"
   },
   "dependencies": {
@@ -27,11 +27,8 @@
     "gulp-cssmin": "*",
     "gulp-autoprefixer": "*",
     "gulp-wait": "*",
-    "mocha": "*",
+    "karma": "~0.10.0",
     "gulp-ngmin": "~0.1.2",
     "gulp-angular-templatecache": "~1.1.0"
-  },
-  "engines": {
-    "node": ">= 0.8.0"
   }
 }

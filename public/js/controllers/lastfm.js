@@ -4,19 +4,19 @@
   angular.module('app').controller('LastFmController', function ($scope, $routeParams, $location, LastFmService, Slug, $rootScope) {
     var username = $routeParams.username;
     $scope.username = username;
+    $scope.artists = [];
     $scope.loading = true;
-    $scope.homepage = false;
 
     if(username){
       $rootScope.title = 'Top 12 artist for: ' + username;
-      LastFmService.get(username, 'user.gettopartists', 12).then(function(data){
-        $scope.artists = data.data.topartists ? data.data.topartists.artist : [];
+      LastFmService.get(username, 'user.gettopartists', 12).success(function(data){
+        console.log(data);
+        $scope.artists = data.topartists ? data.topartists.artist : [];
         $scope.loading = false;
       });
     }else{
       $rootScope.title = 'Please select username';
       $scope.loading = false;
-      $scope.homepage = true;
     }
 
     $scope.submit = function() {

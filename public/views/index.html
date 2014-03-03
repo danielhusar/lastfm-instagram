@@ -14,14 +14,4 @@
 
 <span class="spinner" ng-show="loading"></span>
 
-<div class="photos lastfm row">
-  <div class="col-md-4" ng-repeat="artist in artists" ng-click="instagram(artist.name)">
-    <div>
-      <img ng-src="{{artist.image[4]['#text']}}">
-    </div>
-    <h4>{{artist.name}}</h4>
-    <span>{{artist.playcount}} plays</span>
-  </div>
-</div>
 
-<div class="alert alert-danger" ng-show="!loading && !artists.length">Sorry, this username doesnt exist.</div>

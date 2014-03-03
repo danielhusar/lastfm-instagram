@@ -2,10 +2,14 @@
   "name": "last-fm-instragram-stream",
   "version": "0.0.1",
   "dependencies": {
-    "angular": "*",
-    "angular-route": "*",
-    "angular-slugify": "*",
-    "angular-animate": "*",
+    "angular": "1.2.13",
+    "angular-route": "1.2.13",
+    "angular-slugify": "1.0.0",
+    "angular-animate": "1.2.13",
+    "angular-mocks": "1.2.13",
     "bootstrap": "*"
+  },
+  "resolutions": {
+    "angular": "1.2.13"
   }
 }

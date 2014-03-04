@@ -6,7 +6,7 @@ Install dependencies:
 	npm install
 	bower install
 	
-Build assest:
+Build assets:
 
 	gulp
 	

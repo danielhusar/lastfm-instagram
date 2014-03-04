@@ -4,8 +4,4 @@
 **/
 module.exports = function(helpers){
   'use strict';
-
-	this.get('/test', function(req, res){
-		helpers.template(res, 'index.html', {});
-	});
 };

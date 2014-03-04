@@ -7,12 +7,5 @@
 module.exports = function(){
   'use strict';
 
-	var model = {
-		data : ['first', 'second', 'third'],
-		edit : function(){},
-		new  : function(){},
-		delete : function(){}
-	};
-
-	return model;
+	return {};
 };

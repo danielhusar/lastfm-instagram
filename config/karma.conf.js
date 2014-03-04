@@ -1,10 +1,10 @@
 module.exports = function (config) {
-	'use strict';
+  'use strict';
 
-	config.set({
-		basePath: '../',
-		frameworks: ['jasmine'],
-		files: [
+  config.set({
+    basePath: '../',
+    frameworks: ['jasmine'],
+    files: [
       'public/components/angular/angular.js',
       'public/components/angular-route/angular-route.js',
       'public/components/angular-animate/angular-animate.js',
@@ -13,10 +13,10 @@ module.exports = function (config) {
       'public/js/app.js',
       'public/js/controllers/*.js',
       'public/js/services/*.js',
-			'test/unit/*.js'
-		],
-		autoWatch: false,
-		singleRun: true,
-		browsers: ['PhantomJS']
-	});
+      'test/unit/*.js'
+    ],
+    autoWatch: false,
+    singleRun: true,
+    browsers: ['PhantomJS']
+  });
 };

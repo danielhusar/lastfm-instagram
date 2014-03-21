@@ -1,4 +1,4 @@
-last fm instragram stream [![Build Status](https://travis-ci.org/danielhusar/lastfm-instagram.png)](https://travis-ci.org/danielhusar/lastfm-instagram)
+last fm instragram stream [![Build Status](https://travis-ci.org/danielhusar/lastfm-instagram.svg)](https://travis-ci.org/danielhusar/lastfm-instagram)
 =========================
 
 Install dependencies:

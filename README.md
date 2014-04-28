@@ -22,6 +22,6 @@ Run karma tests:
 
 	npm test
 
-[Demo](http://54.201.21.193:3000/)
+[Demo](http://danielhusar.sk:3000/)
 
 ![Screenshots](public/img/screenshot.png)
